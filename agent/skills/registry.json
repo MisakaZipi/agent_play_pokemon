@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "id": "explore",
+      "name": "Explore",
+      "description": "地图探索与路径推进",
+      "allowed_tools": ["observation", "action", "state"]
+    },
+    {
+      "id": "battle",
+      "name": "Battle",
+      "description": "战斗选择与招式策略",
+      "allowed_tools": ["observation", "action", "state"]
+    },
+    {
+      "id": "heal",
+      "name": "Heal",
+      "description": "治疗与补给流程",
+      "allowed_tools": ["observation", "action", "state"]
+    },
+    {
+      "id": "inventory",
+      "name": "Inventory",
+      "description": "背包管理与道具使用",
+      "allowed_tools": ["observation", "action", "state"]
+    },
+    {
+      "id": "search_guide",
+      "name": "SearchGuide",
+      "description": "卡关时触发攻略检索",
+      "allowed_tools": ["retrieval"]
+    }
+  ]
+}

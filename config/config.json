@@ -1,0 +1,21 @@
+{
+  "rom_path": "./rom.gba",
+  "mgba_path": "./mgba.app/Contents/MacOS/mGBA",
+  "window": {
+    "scale": 2,
+    "title_hint": "mGBA"
+  },
+  "capture": {
+    "mode": "adaptive",
+    "fps_explore": 1,
+    "fps_menu": 5,
+    "fps_battle": 5,
+    "fps_boost": 10,
+    "boost_seconds": 2,
+    "persist_frames": false
+  },
+  "paths": {
+    "logs_dir": "./logs",
+    "frames_dir": "./logs/frames"
+  }
+}

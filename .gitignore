@@ -1,0 +1,10 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+logs/
+notes/
+rom.gba
+rom.sav
+mgba.app/
+口袋妖怪绿宝石懒人整合包/
