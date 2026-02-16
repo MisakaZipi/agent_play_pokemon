@@ -1,4 +1,5 @@
 import subprocess
+import sys
 import time
 from pathlib import Path
 
@@ -17,23 +18,22 @@ class MgbaRunner:
         if not rom_path.exists():
             raise FileNotFoundError(f"ROM not found: {rom_path}")
 
-        self.process = subprocess.Popen(
-            [str(mgba_path), str(rom_path)],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-        time.sleep(1.5)
-        self._auto_start_game()
-
-    def _auto_start_game(self):
-        script_path = self.base_dir / "scripts" / "start_game.applescript"
-        if script_path.exists():
-            subprocess.run(
-                ["osascript", str(script_path)],
+        if not self._is_mgba_running():
+            self.process = subprocess.Popen(
+                [str(mgba_path), str(rom_path)],
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
-                check=False,
             )
+        time.sleep(1.5)
+
+    def _is_mgba_running(self):
+        result = subprocess.run(
+            ["pgrep", "-x", "mGBA"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+        return result.returncode == 0
 
     def stop(self):
         if self.process and self.process.poll() is None:

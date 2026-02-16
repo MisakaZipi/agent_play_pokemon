@@ -3,7 +3,8 @@
   "mgba_path": "./mgba.app/Contents/MacOS/mGBA",
   "window": {
     "scale": 2,
-    "title_hint": "mGBA"
+    "title_hint": "mGBA",
+    "process_name": "mGBA"
   },
   "capture": {
     "mode": "adaptive",
@@ -17,5 +18,17 @@
   "paths": {
     "logs_dir": "./logs",
     "frames_dir": "./logs/frames"
+  },
+  "input": {
+    "A": "X",
+    "B": "Z",
+    "L": "A",
+    "R": "S",
+    "Start": "Enter",
+    "Select": "Backspace",
+    "Up": "ArrowUp",
+    "Down": "ArrowDown",
+    "Left": "ArrowLeft",
+    "Right": "ArrowRight"
   }
 }

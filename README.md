@@ -1,6 +1,6 @@
 # Pokemon Agent (GBA Emerald, macOS, mGBA)
 
-目标：构建一个能自动启动 mGBA、基于视觉感知与 LLM 决策的宝可梦 Agent。支持自适应采集、遇阻联网检索与经验总结。
+目标：构建一个可在 macOS 上运行的宝可梦自动化框架，专注稳定的画面采集与输入控制；后续可接入 Agent 做决策、检索与总结。
 
 ## 快速开始
 1. 准备合法 ROM 并记录路径。
@@ -8,7 +8,8 @@
 3. 安装依赖（PDM）：
    - `pdm install`
 4. 配置 `config/config.json` 中的 `rom_path` 与 `mgba_path`。
-5. 运行 `pdm run python3 src/main.py` 进入采集循环（会自动尝试启动游戏菜单）。
+5. 配置 `config/config.json` 中 `startup.mode` 为 `continue` 或 `new`。
+6. 运行 `pdm run python3 src/main.py` 进入采集循环并自动进入游戏。
 
 ## 目录说明
 - `PLAN.md` 项目总体计划
@@ -16,6 +17,7 @@
 - `DECISIONS.md` 关键技术决策记录
 - `EVAL.md` 评估指标与实验记录
 - `NOTES_TEMPLATE.md` 会话总结模板
+- `PROGRESS.md` 进度记录
 - `config/` 配置目录
 - `src/` 代码目录
 - `scripts/` 脚本目录

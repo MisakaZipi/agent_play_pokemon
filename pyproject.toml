@@ -5,7 +5,9 @@ description = "Pokemon agent framework (macOS + mGBA)"
 requires-python = ">=3.10"
 dependencies = [
   "numpy",
-  "Pillow"
+  "Pillow",
+  "pyautogui>=0.9.54",
+  "pyobjc-framework-Quartz>=12.1"
 ]
 
 [tool.pdm]
